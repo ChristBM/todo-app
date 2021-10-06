@@ -41,5 +41,5 @@
   "devDependencies": {
     "gh-pages": "^3.2.3"
   },
-  "homepage":"https://christbm.github.io/todo-app"
+  "homepage":"https://christbm.github.io/todo-app/"
 }
