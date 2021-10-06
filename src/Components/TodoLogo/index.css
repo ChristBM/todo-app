@@ -1,0 +1,10 @@
+.todo__logo {
+    grid-column: 2/3;
+    place-self: center;
+    width: 70px;
+    height: 70px;
+    background: url('../../Assets/Images/Logotipo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

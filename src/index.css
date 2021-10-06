@@ -1,13 +1,34 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* alata-regular - latin */
+@font-face {
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('./Assets/Fonts/alata-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Alata', Arial, Helvetica, sans-serif;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+#root {
+  display: grid;
+  width: 500px;
+  height: 100vh;
+  grid-template-columns: 35px repeat( 4, 1fr) 35px;
+  grid-template-rows: 80px 60px 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
 }

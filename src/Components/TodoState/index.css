@@ -1,0 +1,45 @@
+.state__container {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block-start: 80px;
+}
+.display-off {
+    display: none;
+}
+/* .state__container_icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+.icon-error {
+    width: 127px;
+    height: 109px;
+    background: url('../../Assets/Images/Error.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.icon-empty {
+    width: 107px;
+    height: 107px;
+    background: url('../../Assets/Images/Empty.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.state__container_title {
+    text-align: center;
+    color: white;
+    font-size: 6.1rem;
+}
+
+.state__container_text {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}

@@ -1,0 +1,34 @@
+.list__container {
+  grid-column: 2/6;
+  grid-row: 3/4;
+  width: 100%;
+  min-height: 480px;
+  max-height: auto;
+  position: relative;
+  padding-block-start: 20px;
+  padding-inline: 10px;
+  border-radius: 5px 5px 0 0;
+  overflow-y: scroll;
+  background-color: #243441;
+}
+
+.list__container::-webkit-scrollbar {
+  display: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 20px 0;
+  list-style: none;
+}
+
+.loading__list {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+

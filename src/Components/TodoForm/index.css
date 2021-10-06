@@ -1,0 +1,68 @@
+.modal__form {
+  display: flex;
+  width: 300px;
+  height: 420px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  font-family: 'Alata', Arial, Helvetica, sans-serif;
+  background-color: #243441;
+}
+
+.modal__form_label {
+  color: white;
+  font-size: 2rem;
+}
+
+.modal__form_textarea {
+  resize: none;
+  width: 282px;
+  height: 265px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #0AFFEF;
+  font-size: 1.6rem;
+}
+
+.modal__form_textarea:focus {
+  outline-style: none;
+  border-width: 2px;
+}
+
+.modal__form_textarea::placeholder {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.modal__button_container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.button {
+  width: 105px;
+  height: 28px;
+  border-style: none;
+  border-radius: 27px;
+  text-decoration: none;
+  font-family: 'Alata', Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #404040;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5), -2px -2px 5px rgba(10, 255, 239, 0.5);
+  cursor: pointer;
+}
+.button:active {
+  transform: scale(0.95);
+  box-shadow: -2px -2px 5px hsla(0, 0%, 0%, 0.5), 1px 1px 5px rgba(10, 255, 239, 0.3);
+}
+
+.modal__button-cancel {
+  background-color: #FF555D;
+}
+.modal__button-add {
+  background-color: #0AFFEF;
+}
