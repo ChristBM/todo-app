@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="11.304" height="15.831" viewBox="0 0 11.304 15.831">
+  <g id="Group_34" data-name="Group 34" transform="translate(-244.638 -28.169)">
+    <path id="trashcubo" d="M2.985,11.062A1.028,1.028,0,0,0,4.03,12h6.406a1.028,1.028,0,0,0,1.045-.938L11.943,4H2.523Z" transform="translate(244 32)" fill="#fff"/>
+    <path id="trashtapainclinada" d="M11.943,2h-1.57V1.5A1.538,1.538,0,0,0,8.8,0H5.663a1.538,1.538,0,0,0-1.57,1.5V2H2.523a.5.5,0,1,0,0,1h9.419a.5.5,0,1,0,0-1ZM9.326,2H5.14V1.5A.513.513,0,0,1,5.663,1H8.8a.513.513,0,0,1,.523.5Z" transform="translate(242.906 34.402) rotate(-30)" fill="#fff"/>
+  </g>
+</svg>

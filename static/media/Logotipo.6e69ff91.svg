@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="87" height="87" viewBox="0 0 87 87">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_39" data-name="Ellipse 39" cx="25" cy="25" r="25" transform="translate(-0.474 0.016)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Logotipo" transform="translate(-21 3)">
+    <circle id="Ellipse_22_light" data-name="Ellipse 22 light" cx="25" cy="25" r="25" transform="translate(36 12)" fill="#4f5d67" opacity="0.5"/>
+    <circle id="Ellipse_23_dark" data-name="Ellipse 23 dark" cx="25" cy="25" r="25" transform="translate(43 19)" fill="#0c1116" opacity="0.5"/>
+    <g id="Group_20" data-name="Group 20" transform="translate(-1491 30)">
+      <g id="Group_17" data-name="Group 17" transform="translate(1485 -29)">
+        <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(45 15)" fill="#243441" stroke="#0affef" stroke-width="2">
+          <circle cx="25" cy="25" r="25" stroke="none"/>
+          <circle cx="25" cy="25" r="24" fill="none"/>
+        </g>
+        <g id="Group_6" data-name="Group 6" transform="translate(1 -0.339)">
+          <text id="ToDo" transform="translate(48 44.339)" fill="#fff" font-size="18" font-family="Alata-Regular, Alata"><tspan x="0" y="0">ToDo</tspan></text>
+          <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(61 48.339)" fill="none" stroke="#fff" stroke-width="2">
+            <ellipse cx="12" cy="4" rx="12" ry="4" stroke="none"/>
+            <ellipse cx="12" cy="4" rx="11" ry="3" fill="none"/>
+          </g>
+          <g id="Check" transform="translate(67.599 44.604)">
+            <rect id="Rectangle_1492" data-name="Rectangle 1492" width="6.783" height="1.795" rx="0.898" transform="translate(1.13 4.071) rotate(39)" fill="#0affef"/>
+            <rect id="Rectangle_1493" data-name="Rectangle 1493" width="10.972" height="1.795" rx="0.898" transform="matrix(0.616, -0.788, 0.788, 0.616, 4.039, 8.646)" fill="#0affef"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="Mask_Group_24" data-name="Mask Group 24" transform="translate(39.474 15.984)" clip-path="url(#clip-path)">
+      <g id="Ellipse_38" data-name="Ellipse 38" transform="translate(-0.925 0.016)" fill="none" stroke="#0c1116" stroke-width="1">
+        <ellipse cx="26.577" cy="27.045" rx="26.577" ry="27.045" stroke="none"/>
+        <ellipse cx="26.577" cy="27.045" rx="26.077" ry="26.545" fill="none"/>
+      </g>
+    </g>
+    <g id="Mask_Group_25" data-name="Mask Group 25" transform="translate(39.474 15.984)" clip-path="url(#clip-path)">
+      <g id="Ellipse_40" data-name="Ellipse 40" transform="translate(-1.826 -1.802)" fill="none" stroke="#4f5d67" stroke-width="1">
+        <ellipse cx="25.676" cy="25.909" rx="25.676" ry="25.909" stroke="none"/>
+        <ellipse cx="25.676" cy="25.909" rx="25.176" ry="25.409" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
