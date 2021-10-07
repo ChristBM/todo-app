@@ -1,13 +1,10 @@
-import React, { useContext, useState } from "react"
-import { TodoContext } from "../../Context"
+import React, { useState } from "react"
 import './index.css'
 
-export function TodoForm() {
+export function TodoForm( { addTodo, setOpenModal, setRotateAdd } ) {
 
   const [ newTodoValue, setNewTodoValue ] = useState('')
   const [ holder, setHolder ] = useState( '¿Tienes algo más que hacer?' )
-
-  const { addTodo, setOpenModal, setRotateAdd } = useContext( TodoContext )
 
   const onChange = ev => {
     setNewTodoValue( ev.target.value )

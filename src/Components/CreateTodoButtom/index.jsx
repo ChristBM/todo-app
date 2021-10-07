@@ -1,12 +1,9 @@
-import React, { useContext } from "react"
-import { TodoContext } from "../../Context"
+import React from "react"
 import { TodoIcon } from "../TodoIcon"
 import { SkeletonLoaderButton } from "../SkeletonLoader"
 import "./index.css"
 
-export function CreateTodoButtom() {
-
-  const { setOpenModal, rotateAdd, setRotateAdd, loading } = useContext( TodoContext )
+export function CreateTodoButtom( { setOpenModal, rotateAdd, setRotateAdd, loading } ) {
 
   const onClickButton = () => {
     setOpenModal( openModal => !openModal )

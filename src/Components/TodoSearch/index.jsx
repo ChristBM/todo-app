@@ -1,10 +1,7 @@
-import React, { useContext } from "react"
-import { TodoContext } from "../../Context"
+import React from "react"
 import "./index.css"
 
-export function TodoSearch() {
-
-	const { searchValue, setSearchValue } = useContext(TodoContext)
+export function TodoSearch( { searchValue, setSearchValue } ) {
 
 	const onSearchValueChange = ev => {
 		console.log( ev.target.value )

@@ -1,11 +1,8 @@
-import React, { useContext } from "react"
-import { TodoContext } from "../../Context"
+import React from "react"
 import { SkeletonLoaderCounter } from "../SkeletonLoader"
 import "./index.css"
 
-export function TodoCounter() {
-
-  const { totalTodos, completedTodos, loading, min_media, max_media } = useContext(TodoContext)
+export function TodoCounter( { totalTodos, completedTodos, loading, min_media, max_media } ) {
 
   const loadReziser = () => {
     if( !(min_media.matches ^ max_media.matches) )
@@ -17,7 +14,7 @@ export function TodoCounter() {
   }
 
   return (
-    <div className="counter__container">
+    <section className="counter__container">
       { loading && <div className="loading__counter">
           <SkeletonLoaderCounter ancho={ loadReziser() }/>
         </div> }
@@ -25,7 +22,7 @@ export function TodoCounter() {
       >Has completado <span className="counter__text-completed">{ completedTodos } </span>
         de <span className="counter__text-total">{ totalTodos }</span>
       </h2>
-    </div>
+    </section>
 
   )
 

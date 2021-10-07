@@ -50,18 +50,3 @@ export function useLocalStorage( itemName, initialValue ) {
 
   return { item, saveItem, loading, error }
 }
-
-/* const defaultTodos = [
-  {
-    text: 'Costar cebolla',
-    complete: false
-  },
-  {
-    text: 'Tomar el curso de intro a React',
-    complete: true
-  },
-  {
-    text: 'Llorar con la llorona',
-    complete: false
-  },
-] */

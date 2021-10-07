@@ -1,9 +1,7 @@
-import React, { useState, createContext } from "react"
+import { useState } from "react"
 import { useLocalStorage } from "./useLocalStorage"
 
-export const TodoContext = createContext()
-
-export function TodoProvider( props ) {
+export function useTodos( ) {
 
   const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage( 'TODOs_V1', [] )
 
@@ -71,29 +69,73 @@ export function TodoProvider( props ) {
   const min_media = matchMedia('(min-width: 320px)')
   const max_media = matchMedia('(max-width: 500px)')
 
-  return (
-    <TodoContext.Provider
-      value={
-        { totalTodos,
-          completedTodos,
-          searchValue,
-          setSearchValue,
-          searchedTodos,
-          completeTodo,
-          deleteTodo,
-          loading,
-          error,
-          openModal,
-          setOpenModal,
-          addTodo,
-          rotateAdd,
-          setRotateAdd,
-          min_media,
-          max_media,
-        }
+  const loadReziserHeader = () => {
+    if( !(min_media.matches ^ max_media.matches) )
+    {
+      return window.innerWidth
+    }
+    else if(min_media.matches){ return 500 }
+    else if(max_media.matches){ return 320 }
+  }
+
+  const loadReziserList = () => {
+    if( !(min_media.matches ^ max_media.matches) )
+    {
+      return window.innerWidth - 90
+    }
+    else if(min_media.matches){ return 410 }
+    else if(max_media.matches){ return 230 }
+  }
+
+  const showState = () => { return ( !loading && totalTodos === 0 ) ? true : false }
+
+  const typeState = () => {
+
+    let infoS = {
+      'icon': '',
+      'title': '',
+      'text': ''
+    }
+    if( !loading && totalTodos === 0 )
+    {
+      infoS = {
+        'icon': 'icon-empty',
+        'title': 'Hola!!!',
+        'text': 'Parece que no tienes tareas, ¿te gustaría añadir una?'
       }
-    >
-      { props.children }
-    </TodoContext.Provider>
+    }
+    if( error )
+    {
+      infoS = {
+        'icon': 'icon-error',
+        'title': 'Upss!!!',
+        'text': 'Ha ocurrido un Error, por favor revise su conexión y recargue la app.'
+      }
+    }
+    return infoS
+  }
+
+  return (
+
+    {
+      loading,
+      loadReziserHeader,
+      searchValue, setSearchValue,
+      totalTodos,
+      completedTodos,
+      min_media,
+      max_media,
+      loadReziserList,
+      showState,
+      typeState,
+      searchedTodos,
+      completeTodo,
+      deleteTodo,
+      addTodo,
+      openModal, setOpenModal,
+      rotateAdd, setRotateAdd
+    }
+
   )
+
 }
