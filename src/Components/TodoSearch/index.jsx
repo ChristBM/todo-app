@@ -1,12 +1,7 @@
 import React from "react"
 import "./index.css"
 
-export function TodoSearch( { searchValue, setSearchValue } ) {
-
-	const onSearchValueChange = ev => {
-		console.log( ev.target.value )
-		setSearchValue( ev.target.value )
-	}
+export function TodoSearch( { searchValue, onSearchValueChange } ) {
 
 	return (
 		<input

@@ -3,7 +3,7 @@ import { useLocalStorage } from "./useLocalStorage"
 
 export function useTodos( ) {
 
-  const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage( 'TODOs_V1', [] )
+  const { item: todos, saveItem: saveTodos, loading, error, reload: reloadTodos, sincronize: sincronizeTodos } = useLocalStorage( 'TODOs_V1', [] )
 
   const [ searchValue, setSearchValue ] = useState('')
 
@@ -28,6 +28,11 @@ export function useTodos( ) {
       return todoText.includes( searchText )
     })
   }
+
+  const onSearchValueChange = ev => {
+		console.log( ev.target.value )
+		setSearchValue( ev.target.value )
+	}
 
   const addTodo = text => {
 
@@ -78,6 +83,15 @@ export function useTodos( ) {
     else if(max_media.matches){ return 320 }
   }
 
+  const loadReziserCounter = () => {
+    if( !(min_media.matches ^ max_media.matches) )
+    {
+      return window.innerWidth - 90
+    }
+    else if(min_media.matches){ return 410 }
+    else if(max_media.matches){ return 230 }
+  }
+
   const loadReziserList = () => {
     if( !(min_media.matches ^ max_media.matches) )
     {
@@ -87,32 +101,15 @@ export function useTodos( ) {
     else if(max_media.matches){ return 230 }
   }
 
-  const showState = () => { return ( !loading && totalTodos === 0 ) ? true : false }
-
-  const typeState = () => {
-
-    let infoS = {
-      'icon': '',
-      'title': '',
-      'text': ''
-    }
-    if( !loading && totalTodos === 0 )
+  const onClickTodoButton = () => {
+    setOpenModal( openModal => !openModal )
+    if( rotateAdd === 'add__icon_container')
     {
-      infoS = {
-        'icon': 'icon-empty',
-        'title': 'Hola!!!',
-        'text': 'Parece que no tienes tareas, ¿te gustaría añadir una?'
-      }
+      setRotateAdd( 'add__icon_container-active' )
     }
-    if( error )
-    {
-      infoS = {
-        'icon': 'icon-error',
-        'title': 'Upss!!!',
-        'text': 'Ha ocurrido un Error, por favor revise su conexión y recargue la app.'
-      }
+    else {
+      setRotateAdd( 'add__icon_container' )
     }
-    return infoS
   }
 
   return (
@@ -120,20 +117,21 @@ export function useTodos( ) {
     {
       loading,
       loadReziserHeader,
-      searchValue, setSearchValue,
+      searchValue, onSearchValueChange,
+      loadReziserCounter,
       totalTodos,
       completedTodos,
-      min_media,
-      max_media,
       loadReziserList,
-      showState,
-      typeState,
       searchedTodos,
       completeTodo,
       deleteTodo,
       addTodo,
       openModal, setOpenModal,
-      rotateAdd, setRotateAdd
+      rotateAdd, setRotateAdd,
+      error,
+      onClickTodoButton,
+      sincronizeTodos,
+      reloadTodos
     }
 
   )

@@ -42,18 +42,19 @@ export function SkeletonLoaderCounter( props ) {
 export function SkeletonLoaderList( props ) {
 
   const [ ancho ] = useState( props.ancho )
+  const [ alto ] = useState( props.alto )
 
   return (
     <ContentLoader
     speed={ 0.5 }
     width={ ancho }
-    height={ 480 }
+    height={ alto }
     backgroundColor="#243441"
     foregroundColor="#3d4b56"
     {...props}
   >
 
-    <rect x="0" y="0" rx="5" ry="5" width="410" height="500" />
+    <rect x="0" y="0" rx="5" ry="5" width="410" height="1024" />
 
   </ContentLoader>
   )
@@ -64,14 +65,14 @@ export function SkeletonLoaderButton( props ) {
   return (
     <ContentLoader
     speed={ 0.5 }
-    width={ 30 }
-    height={ 100 }
+    width={ 40 }
+    height={ 40 }
     backgroundColor="#243441"
     foregroundColor="#3d4b56"
     {...props}
   >
 
-    <rect x="0" y="0" rx="5" ry="5" width="30" height="100" />
+    <circle cx="20" cy="20" r="20" />
 
   </ContentLoader>
   )

@@ -32,25 +32,29 @@ export function TodoForm( { addTodo, setOpenModal, setRotateAdd } ) {
   }
 
   return (
-    <form onSubmit={ onAddTodo } className="modal__form">
-      <label className="modal__form_label">¡Añade una nueva tarea!</label>
-      <textarea
-        className="modal__form_textarea"
-        value={ newTodoValue }
-        placeholder={ holder }
-        onChange={ onChange }
-      />
-      <div className="modal__button_container">
-        <button
-          className="button modal__button-cancel"
-          type="button"
-          onClick={ onCancel }
-        >Cancelar</button>
-        <button
-          className="button modal__button-add"
-          type="submit"
-        >Añadir</button>
-      </div>
-    </form>
+
+    <div className="modal">
+      <form onSubmit={ onAddTodo } className="modal__form">
+        <label className="modal__form_label">¡Añade una nueva tarea!</label>
+        <textarea
+          className="modal__form_textarea"
+          value={ newTodoValue }
+          placeholder={ holder }
+          onChange={ onChange }
+        />
+        <div className="modal__button_container">
+          <button
+            className="button modal__button-cancel"
+            type="button"
+            onClick={ onCancel }
+          >Cancelar</button>
+          <button
+            className="button modal__button-add"
+            type="submit"
+          >Añadir</button>
+        </div>
+      </form>
+    </div>
+
   )
 }

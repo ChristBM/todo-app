@@ -1,11 +1,13 @@
 import React from "react"
 import './index.css'
 
-export function Header( { children } ) {
+export function Header( props ) {
 
   return (
     <header className="header">
-      { children }
+
+      { props.loading ? props.onLoading() : props.onHeaderReady() }
+
     </header>
   )
 }

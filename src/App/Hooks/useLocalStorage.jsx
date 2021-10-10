@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 
 export function useLocalStorage( itemName, initialValue ) {
 
+  const [ reload, setReload ] = useState( true )
   const [ loading, setLoading ] = useState( true )
   const [ error, setError ] = useState( false )
   const [ item, setItem ] = useState( initialValue )
@@ -26,6 +27,7 @@ export function useLocalStorage( itemName, initialValue ) {
 
         setItem( parsedItems )
         setLoading( false )
+        setReload( true )
       }
       catch(error) {
         setError( error )
@@ -33,7 +35,7 @@ export function useLocalStorage( itemName, initialValue ) {
 
     }, 1000 )
 
-  })
+  }, [ reload ] )
 
   const saveItem = newItem => {
 
@@ -48,5 +50,10 @@ export function useLocalStorage( itemName, initialValue ) {
 
   }
 
-  return { item, saveItem, loading, error }
+  const sincronize = () => {
+    setLoading( true )
+    setReload( false )
+  }
+
+  return { item, saveItem, loading, error, reload, sincronize }
 }

@@ -4,7 +4,8 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-       url('./Assets/Fonts/alata-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('./Assets/Fonts/alata-v2-latin-regular.ttf') format('truetype'),
+        url('./Assets/Fonts/alata-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
 }
 
 * {

@@ -7,14 +7,11 @@
     align-items: center;
     padding-block-start: 80px;
 }
+
 .display-off {
     display: none;
 }
-/* .state__container_icon {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-} */
+
 .icon-error {
     width: 127px;
     height: 109px;
@@ -27,6 +24,15 @@
     width: 107px;
     height: 107px;
     background: url('../../Assets/Images/Empty.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.icon-notfound {
+    width: 126px;
+    height: 109px;
+    background: url('../../Assets/Images/NotFound.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

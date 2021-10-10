@@ -1,18 +1,46 @@
 import React from 'react'
 import './index.css'
 
-export function TodoState( props ) {
+export function TodoState( { value, clean } ) {
 
-  const onOffState = () => { return props.showState() ? 'state__container' : 'display-off' }
+  const showState = () => { return clean ? 'display-off' : 'state__container' }
 
-  let objState = props.typeState()
+  const arrayStates = [
+    {
+      state: 'error',
+      icon: 'icon-error',
+      title: 'Upss',
+      text: 'Ha ocurrido un Error, por favor revise su conexión y recargue la app.'
+    },
+    {
+      state: 'empty',
+      icon: 'icon-empty',
+      title: 'Hola',
+      text: 'Parece que no tienes tareas, ¿te gustaría añadir una?'
+    },
+    {
+      state: 'notfound',
+      icon: 'icon-notfound',
+      title: 'Nada',
+      text: 'Parece que el ToDo no está, prueba con otra palabra que creas que coincide.'
+    },
+    {
+      state: 'clean',
+      icon: '',
+      title: '',
+      text: ''
+    }
+  ]
 
   return (
-    <div className={ onOffState() }>
-      <div className={ objState['icon'] }>
-      </div>
-      <h3 className="state__container_title">{ objState['title'] }</h3>
-      <p className="state__container_text">{ objState['text'] }</p>
+    <div className={ showState() }>
+
+      <div className={ arrayStates[value].icon }></div>
+
+      <h3 className="state__container_title">{ arrayStates[value].title }</h3>
+
+      <p className="state__container_text">{ arrayStates[value].text }</p>
+
     </div>
   )
 }
