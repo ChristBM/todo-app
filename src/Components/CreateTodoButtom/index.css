@@ -1,15 +1,15 @@
-.CreateTodoButton {
+.add__todo {
   display: flex;
   width: 40px;
   height: 40px;
   position: absolute;
-  bottom: 50px;
+  bottom: 70px;
   right: 2.5px;
   z-index: 5;
   justify-content: center;
   align-items: center;
   background-color: #243441;
-  border: none;
+  border: 1px solid white;
   border-radius: 50%;
   cursor: pointer;
 }

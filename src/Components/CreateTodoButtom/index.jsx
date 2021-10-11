@@ -5,7 +5,7 @@ export function CreateTodoButtom( props ) {
 
   return (
     <button
-      className="CreateTodoButton"
+      className="add__todo"
       onClick={ props.onClickTodoButton }
     >
 
