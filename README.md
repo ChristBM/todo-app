@@ -1,32 +1,33 @@
 # ToDo List
 
-Una sencilla aplicación de lista de tareas usando create react app. En ella podrás crear los ToDos o tareas que quieras realizar, puedes marcarlas como completadas, buscar entre muchos ToDos y eliminar los que desees. La información persiste gracias al localStorage del navegador y mientras no se limpie, tendrás tus ToDos a salvo, no importa que cierres el navegador. El diseño fue realizado en Adobe XD.
+A simple to-do list application using create react app. In it you can create the ToDos or tasks you want to perform, you can mark them as completed, search through many ToDos and delete the ones you want. The information persists thanks to the browser's localStorage and as long as it is not cleared, you will have your ToDos safe, no matter if you close the browser. The design was made in Adobe XD.
 
-## Ver proyecto :rocket:
+## View project :rocket:
 [Deploy](https://christbm.github.io/todo-app/)
 
-## Recursos y Enlaces :fountain:
+## Resources & Links :fountain:
 [Tipografía Principal](http://google-webfonts-helper.herokuapp.com/fonts/alata?subsets=latin "Alata")
-## Contribuyedo :raising_hand:
-El proyecto está abierto a cambios o sugerencias. Se aceptan todo tipo de críticas constructivas.
 
-## Instalación :electric_plug:
-Clonar todo-app:
+## Contributing :raising_hand:
+The project is open to changes or suggestions. Constructive criticism of any kind is welcome.
+
+## Installation :electric_plug:
+Clone todo-app:
 ```
 git clone https://github.com/ChristBM/todo-app.git
  ```
 
-Instalar dependencias:
+Install dependencies:
 ```
 npm install
 ```
 
-Deploy local de todo-app:
+Local todo-app deploy:
 ```
 npm run start
 ```
 
-## Licencia :unlock:
+## License :unlock:
 
 Copyright © 2021 [Christian Boffill](https://github.com/ChristBM)
 
