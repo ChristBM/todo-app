@@ -1,4 +1,4 @@
-# ToDo List
+# ToDo List :clipboard:
 
 A simple to-do list application using create react app. In it you can create the ToDos or tasks you want to perform, you can mark them as completed, search through many ToDos and delete the ones you want. The information persists thanks to the browser's localStorage and as long as it is not cleared, you will have your ToDos safe, no matter if you close the browser. The design was made in Adobe XD.
 
